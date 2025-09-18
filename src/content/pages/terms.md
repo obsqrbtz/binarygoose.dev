@@ -7,7 +7,7 @@ seo:
 
 **Last updated on January 11, 2024**
 
-These Terms of Service ("Terms") govern your access to and use of [Website Name] ("the Website") and any related services provided by [Website Owner/Company] ("we," "us," or "our"). Please read these Terms carefully before using the Website.
+These Terms of Service ("Terms") govern your access to and use of [binarygoose.dev](https://binarygoose.dev) and any related services provided by [binarygoose.dev](https://binarygoose.dev) ("we," "us," or "our"). Please read these Terms carefully before using the Website.
 
 **1. Acceptance of Terms**
 

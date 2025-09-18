@@ -10,7 +10,7 @@ C# developer and Linux nerd.
 
 ### Currently
 
-Mainly working on a C# desktop applications and some C++ libs.
+Developing cross-platform desktop applications in **C# (.NET 5+, AvaloniaUI)** and **C++ (Qt6)**.
 
 ### Specialized in
 
