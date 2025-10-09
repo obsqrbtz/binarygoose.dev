@@ -1,0 +1,166 @@
+@font-face {
+  font-family: 'JetBrainsMono';
+  src: url('./fonts/JetBrainsMono-VariableFont_wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --bg-color: #121212;
+  --text-color: #e3e4e3;
+  --highlight-color: #5c90ff;
+  --dim-color: #ffe033;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'JetBrainsMono', monospace;
+  font-size: 14px;
+  line-height: 1.6;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 80ch;
+  margin: 0 auto;
+}
+
+.prompt {
+  color: var(--text-color);
+  margin-bottom: 10px;
+}
+
+.prompt::before {
+  content: "user@binarygoose:~$ ";
+  color: var(--text-color);
+}
+
+nav {
+  margin-bottom: 30px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: var(--highlight-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-color);
+  margin: 20px 0 10px 0;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 1.2em;
+}
+
+h2 {
+  font-size: 1.1em;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+a {
+  color: var(--highlight-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+pre, code {
+  font-family: 'JetBrainsMono', monospace;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+pre {
+  margin: 15px 0;
+  white-space: pre-wrap;
+}
+
+code {
+  color: var(--text-color);
+}
+
+ul, ol {
+  margin: 15px 0;
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+.post-list {
+  list-style: none;
+  padding: 0;
+}
+
+.post-list li {
+  margin-bottom: 15px;
+}
+
+.post-list .post-title {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.post-list .post-title:hover {
+  color: var(--highlight-color);
+}
+
+.post-list .post-date {
+  color: var(--dim-color);
+  font-size: 0.9em;
+}
+
+.content {
+  margin-top: 20px;
+}
+
+.post-meta {
+  color: var(--dim-color);
+  margin-bottom: 20px;
+  font-size: 0.9em;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+    font-size: 13px;
+  }
+  
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+::selection {
+  background-color: var(--text-color);
+  color: var(--bg-color);
+}

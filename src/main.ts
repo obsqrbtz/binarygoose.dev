@@ -11,6 +11,39 @@ async function main() {
   await fs.promises.rm(config.outDir, { recursive: true, force: true });
   await fs.promises.mkdir(config.outDir, { recursive: true });
 
+  const assetsDir = path.join(config.outDir, 'assets');
+  const fontSrcDir = path.join('src', 'assets', 'fonts');
+  const fontDestDir = path.join(assetsDir, 'fonts');
+
+  await fs.promises.mkdir(assetsDir, { recursive: true });
+
+  try {
+    await fs.promises.copyFile(
+      path.join('src', 'assets', 'style.css'),
+      path.join(assetsDir, 'style.css')
+    );
+    console.log(`Copied style.css`);
+  }
+  catch (error) {
+    console.log('No fonts folder found, skipping font copy');
+  }
+
+  try {
+    await fs.promises.access(fontSrcDir);
+    await fs.promises.mkdir(fontDestDir, { recursive: true });
+    const fontFiles = await fs.promises.readdir(fontSrcDir);
+
+    for (const fontFile of fontFiles) {
+      await fs.promises.copyFile(
+        path.join(fontSrcDir, fontFile),
+        path.join(fontDestDir, fontFile)
+      );
+    }
+    console.log(`Copied ${fontFiles.length} font files`);
+  } catch (error) {
+    console.log('No fonts folder found, skipping font copy');
+  }
+
   const pages = await buildPages(config.pageDir, config.outDir)
   const pageTemplate = await fs.promises.readFile(path.join(config.templateDir, "page.html"), "utf-8");
   const navHtml = buildNav(pages);
@@ -19,7 +52,7 @@ async function main() {
 
   const posts = await buildPosts(config.postDir, config.outDir)
   const postTemplate = await fs.promises.readFile(path.join(config.templateDir, "post.html"), "utf8");
-  
+
   await renderPosts(posts, postTemplate, navHtml);
 
   renderHome(posts, config.outDir, navHtml);
