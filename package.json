@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "type": "commonjs",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
-    "build": "tsc && node dist/index.js",
+    "build": "tsc && node dist/main.js",
     "serve": "serve dist"
   },
   "keywords": [],

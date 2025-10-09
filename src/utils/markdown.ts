@@ -1,8 +1,7 @@
 import fs from 'fs';
-import path from 'path';
 import { marked } from 'marked';
 
-async function loadPost(filePath: string, outPath: string){
+export async function loadPost(filePath: string, outPath: string){
     const {front, body } = await loadMardown(filePath);
     const html = await marked.parse(body);
     const post: Post = {
@@ -16,7 +15,7 @@ async function loadPost(filePath: string, outPath: string){
     return post;
 }
 
-async function loadPage(filePath: string, outPath: string){
+export async function loadPage(filePath: string, outPath: string){
     const {front, body } = await loadMardown(filePath);
     const html = await marked.parse(body);
     const page: Page = {
@@ -69,6 +68,3 @@ function parseFrontMatter(text: string) {
 
   return { front, body };
 }
-
-
-export { loadPost, loadPage };
