@@ -11,39 +11,40 @@
   * Flexoki color scheme
   *  https://github.com/kepano/flexoki
   */
-  /* Main background and text */
-  --bg-color: #100F0F;             /* background */
-  --text-color: #E6E4D9;           /* foreground */
-  --heading-text-color: #FFFCF0;   /* brightWhite */
-  --highlight-color: #D0A215;      /* brightYellow */
-  --dim-color: #575653;             /* brightBlack */
-
-  /* Code blocks */
-  --code-bg-color: #0b0a0a;         /* black */
-  --code-border-color: #575653;     /* brightBlack */
-  --code-text-color: #E6E4D9;       /* foreground */
-
-  /* Images */
-  --img-border-color: #575653;      /* brightBlack */
 
   /* Syntax highlighting */
-  --hl-black: #100F0F;              /* black */
-  --hl-red: #AF3029;                /* red */
-  --hl-green: #879A39;              /* brightGreen */
-  --hl-yellow: #D0A215;             /* brightYellow */
-  --hl-blue: #205EA6;               /* blue */
-  --hl-purple: #5E409D;             /* purple */
-  --hl-cyan: #24837B;               /* cyan */
-  --hl-white: #F2F0E5;              /* white */
+  --hl-black: #100F0F;
+  --hl-red: #AF3029;
+  --hl-green: #879A39;
+  --hl-yellow: #D0A215;
+  --hl-blue: #205EA6;
+  --hl-purple: #5E409D;
+  --hl-cyan: #24837B;
+  --hl-white: #F2F0E5;
 
-  --hl-bright-black: #575653;       /* brightBlack */
-  --hl-bright-red: #D14D41;         /* brightRed */
-  --hl-bright-green: #66800B;       /* green */
-  --hl-bright-yellow: #D0A215;      /* brightYellow */
-  --hl-bright-blue: #4385BE;        /* brightBlue */
-  --hl-bright-purple: #8B7EC8;      /* brightPurple */
-  --hl-bright-cyan: #3AA99F;        /* brightCyan */
-  --hl-bright-white: #FFFCF0;       /* brightWhite */
+  --hl-bright-black: #575653;
+  --hl-bright-red: #D14D41;
+  --hl-bright-green: #66800B;
+  --hl-bright-yellow: #D0A215;
+  --hl-bright-blue: #4385BE;
+  --hl-bright-purple: #8B7EC8;
+  --hl-bright-cyan: #3AA99F;
+  --hl-bright-white: #FFFCF0;
+
+    /* Code blocks */
+  --code-bg-color: #0b0a0a;
+  --code-border-color: var(--hl-bright-black); 
+  --code-text-color: var(--hl-white);
+
+    /* Main background and text */
+  --bg-color: var(--hl-black);
+  --text-color: var(--hl-white);
+  --heading-text-color: var(--hl-green);
+  --highlight-color: var(--hl-yellow);
+  --dim-color: var(--hl-bright-black);
+
+  /* Images */
+  --img-border-color: var(--hl-bright-black); 
 }
 
 * {
@@ -73,8 +74,8 @@ body {
 }
 
 .prompt::before {
-  content: "user@binarygoose:~$ ";
-  color: var(--text-color);
+  content: "❯ ";
+  color: var(--hl-green);
 }
 
 nav {
@@ -121,7 +122,7 @@ a {
 }
 
 a:hover {
-  text-decoration: underline;
+  text-decoration: underline dashed;
 }
 
 pre, code {
@@ -162,21 +163,32 @@ li {
 }
 
 .post-list li {
-  margin-bottom: 15px;
+  margin-bottom: 4px;
 }
 
-.post-list .post-title {
-  color: var(--text-color);
+.post-list li a {
   text-decoration: none;
+  white-space: pre;
 }
 
-.post-list .post-title:hover {
-  color: var(--highlight-color);
+.post-list li a:hover{
+  text-decoration: underline dashed;
 }
 
-.post-list .post-date {
-  color: var(--dim-color);
-  font-size: 0.9em;
+.perms {
+  color: var(--hl-yellow);
+}
+
+.user {
+  color: var(--hl-blue);
+}
+
+.date {
+  color: var(--hl-green);
+}
+
+.filename {
+  color: var(--hl-white);
 }
 
 .content {

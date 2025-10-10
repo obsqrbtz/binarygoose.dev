@@ -3,6 +3,7 @@ import path from 'path'
 
 import { loadPost } from '../utils/markdown';
 import { writeHtml } from '../utils/file';
+import { createStyledTitle } from '../utils/helpers';
 
 export async function buildPosts(sourceDir: string, outDir: string){
     const files = await fs.promises.readdir(sourceDir);
@@ -18,9 +19,11 @@ export async function buildPosts(sourceDir: string, outDir: string){
 }
 
 export async function renderPosts(posts: Post[], template: string, navHtml: string) {
+  posts.sort((b, a) => a.publishDate.getTime() - b.publishDate.getTime())
   for (const post of posts){
     const html = template
         .replaceAll("{{title}}", post.title)
+        .replace("{{term_title}}", createStyledTitle(post.title))
         .replace("{{content}}", post.content)
         .replace("{{publishDate}}", post.publishDate.toDateString())
         .replace("{{tags}}", post.tags.join(", "))

@@ -25,7 +25,18 @@ async function main() {
     console.log(`Copied style.css`);
   }
   catch (error) {
-    console.log('No fonts folder found, skipping font copy');
+    console.log('Style.css is missing');
+  }
+
+    try {
+    await fs.promises.copyFile(
+      path.join('src', 'assets', 'favicon.png'),
+      path.join(assetsDir, 'favicon.png')
+    );
+    console.log(`Copied favicon.png`);
+  }
+  catch (error) {
+    console.log('Favicon is missing.');
   }
 
   try {
@@ -41,7 +52,7 @@ async function main() {
     }
     console.log(`Copied ${fontFiles.length} font files`);
   } catch (error) {
-    console.log('No fonts folder found, skipping font copy');
+    console.log('Fonts dir is missing');
   }
 
   const pages = await buildPages(config.pageDir, config.outDir)

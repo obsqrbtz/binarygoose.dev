@@ -6,23 +6,12 @@ seo:
 
 ## Daniel Dada
 
-C# developer and Linux nerd.
-
-### Currently
-
-Developing cross-platform desktop applications in **C# (.NET 5+, AvaloniaUI)** and **C++ (Qt6)**.
-
-### Specialized in
-
-- Desktop UI
-- Processing binary data
-- Playing around with dotfiles
-- Hating Ubuntu with absolutely no valid reason.
+C# developer and Linux nerd. Specialized in desktop UI, processing binary data, tinkering with dotfiles, and hating Ubuntu for absolutely no valid reason.
 
 ### Interests
 
 - **Languages:** C#, C++
-- **Fields:** Desktop, web, audio processing.
+- **Fields:** Desktop, web.
 
 ## Education
 
@@ -30,11 +19,14 @@ Developing cross-platform desktop applications in **C# (.NET 5+, AvaloniaUI)** a
 
 Maths and computer science.
 
-## Occupation
+## Professional Experience
 
-2023 - Now - **Neftegazgeofizika**, Tver.
+**Software Engineer**
 
-Software engineer
+*АО "Нефтегазгеофизика", Tver* | *May 2023 – Present*
+
+- Developed cross-platform desktop applications in **C# (.NET 5+, AvaloniaUI)** and **C++ (Qt6)**.
+- Designed and implemented internal libraries.
 
 ## Tech stack
 

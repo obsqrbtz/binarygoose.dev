@@ -3,6 +3,7 @@ import path from 'path'
 
 import { loadPage } from '../utils/markdown';
 import { writeHtml } from '../utils/file';
+import { createStyledTitle } from '../utils/helpers';
 
 export async function buildPages(sourceDir: string, outDir: string){
     const files = await fs.promises.readdir(sourceDir);
@@ -21,6 +22,7 @@ export async function renderPages(pages: Page[], template: string, navHtml: stri
   for (const page of pages){
     const html = template
         .replaceAll("{{title}}", page.title)
+        .replace("{{term_title}}", createStyledTitle(page.title))
         .replace("{{content}}", page.content)
         .replace("{{nav}}", navHtml);
     await writeHtml(page.outDir, html)
