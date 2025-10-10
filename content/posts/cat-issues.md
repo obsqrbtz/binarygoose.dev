@@ -83,4 +83,4 @@ And suddenly, everything worked.
 
 Debugging often starts at the wrong end of the stack. It’s tempting to dive straight into logs, kernel flags, and firmware updates, but sometimes the issue is sitting right on your desk.
 
-![](https://ornella.club/uploads/posts/2023-05/30958/1684941839_ornella-club-p-khitrii-kotik-oboi-4.jpg)
+![](https://images8.alphacoders.com/133/thumb-1920-1332365.jpeg)
