@@ -1,5 +1,5 @@
 ---
-title: "Yes, that's definitely OS's fault /s"
+title: Yes, that's definitely OS's fault /s
 publishDate: "2025-09-18"
 updated: "2025-09-18"
 isFeatured: true

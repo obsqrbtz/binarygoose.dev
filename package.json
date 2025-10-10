@@ -6,17 +6,22 @@
   "main": "main.js",
   "scripts": {
     "build": "tsc && node dist/main.js",
-    "serve": "serve dist"
+    "serve": "serve dist",
+    "watch": "node scripts/dev.js",
+    "dev": "concurrently \"npm run watch\" \"npm run serve\""
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^24.7.0",
+    "chokidar": "^4.0.3",
+    "concurrently": "^9.2.1",
     "serve": "^14.2.5",
     "typescript": "^5.9.3"
   },
   "dependencies": {
+    "highlight.js": "^11.11.1",
     "marked": "^16.4.0"
   }
 }

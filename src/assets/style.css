@@ -1,18 +1,38 @@
 @font-face {
-  font-family: 'JetBrainsMono';
-  src: url('./fonts/JetBrainsMono-VariableFont_wght.ttf') format('truetype');
+  font-family: 'CommitMono';
+  src: url('./fonts/CommitMono-400-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 :root {
-  --bg-color: #121212;
-  --text-color: #e3e4e3;
-  --highlight-color: #5c90ff;
-  --dim-color: #ffe033;
+  --bg-color: #1b1d1e;
+  --text-color: #afafaf;
+  --heading-text-color: #e2e2e2;
+  --highlight-color: #feed6c;
+  --dim-color: #6f6f6f;
+  --code-bg-color: #18191a;
+  --code-border-color: #333333;
+  --code-text-color: #afafaf;
+  --img-border-color: #333333;
+  --hl-black: #1b1d1e;
+  --hl-red: #e6dc44;
+  --hl-green: #c8be46;
+  --hl-yellow: #f4fd22;
+  --hl-blue: #737174;
+  --hl-purple: #747271;
+  --hl-cyan: #62605f;
+  --hl-white: #c6c5bf;
+  --hl-bright-black: #505354;
+  --hl-bright-red: #fff78e;
+  --hl-bright-green: #fff27d;
+  --hl-bright-yellow: #feed6c;
+  --hl-bright-blue: #919495;
+  --hl-bright-purple: #9a9a9d;
+  --hl-bright-cyan: #a3a3a6;
+  --hl-bright-white: #dadbd6;
 }
-
 * {
   margin: 0;
   padding: 0;
@@ -22,7 +42,7 @@
 body {
   background-color: var(--bg-color);
   color: var(--text-color);
-  font-family: 'JetBrainsMono', monospace;
+  font-family: 'CommitMono', monospace;
   font-size: 14px;
   line-height: 1.6;
   padding: 20px;
@@ -65,7 +85,7 @@ nav a:hover {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: var(--text-color);
+  color: var(--heading-text-color);
   margin: 20px 0 10px 0;
   font-weight: normal;
 }
@@ -92,18 +112,26 @@ a:hover {
 }
 
 pre, code {
-  font-family: 'JetBrainsMono', monospace;
-  background-color: var(--bg-color);
-  color: var(--text-color);
+  font-family: 'CommitMono', monospace;
+  color: var(--code-text-color);
 }
 
 pre {
   margin: 15px 0;
   white-space: pre-wrap;
+  padding: 10px;
+  background-color: var(--code-bg-color);
+  border: 1px solid var(--code-border-color);
 }
 
-code {
-  color: var(--text-color);
+p, li, h1, h2, h3, h4, h5, h6 {
+  code{
+
+    background-color: var(--code-bg-color);
+    padding: 2px 4px;
+    margin: 2px 4px;
+    border: 1px solid var(--code-border-color);
+  }
 }
 
 ul, ol {
@@ -147,6 +175,60 @@ li {
   margin-bottom: 20px;
   font-size: 0.9em;
 }
+
+p {
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1em 0;
+    border: 1px solid var(--img-border-color);
+  }
+}
+
+.hljs-comment,
+.hljs-quote { color: var(--hl-bright-black); font-style: italic; }
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-subst { color: var(--hl-red); font-weight: bold; }
+
+.hljs-literal,
+.hljs-number,
+.hljs-tag .hljs-attr { color: var(--hl-green); }
+
+.hljs-string,
+.hljs-doctag { color: var(--hl-yellow); }
+
+.hljs-title,
+.hljs-section,
+.hljs-selector-id { color: var(--hl-blue); }
+
+.hljs-type,
+.hljs-class .hljs-title { color: var(--hl-purple); }
+
+.hljs-name,
+.hljs-attribute { color: var(--hl-cyan); }
+
+.hljs-variable,
+.hljs-template-variable,
+.hljs-link,
+.hljs-bullet { color: var(--hl-white); }
+
+.hljs-meta,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-emphasis { color: var(--hl-bright-red); }
+
+.hljs-strong { font-weight: bold; }
+
+.hljs-addition { background-color: var(--hl-bright-green); }
+
+.hljs-deletion { background-color: var(--hl-bright-yellow); }
+
+/* Scrollbar inside code blocks */
+pre::-webkit-scrollbar { height: 8px; background: var(--hl-black); }
+pre::-webkit-scrollbar-thumb { background-color: var(--hl-bright-black); border-radius: 4px; }
 
 @media (max-width: 768px) {
   body {

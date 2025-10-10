@@ -1,5 +1,31 @@
 import fs from 'fs';
 import { marked } from 'marked';
+import hljs from "highlight.js";
+
+const renderer = new marked.Renderer();
+
+renderer.code = function({text, lang}: {text: string, lang?: string, escaped?: boolean}) {
+  if (lang && hljs.getLanguage(lang)) {
+    try {
+      const highlighted = hljs.highlight(text, { language: lang }).value;
+      return `<pre><code class="hljs language-${lang}">${highlighted}</code></pre>`;
+    } catch (err) {
+      console.error('Syntax highlighting failed for language:', lang, err);
+    }
+  }
+  
+  try {
+    const highlighted = hljs.highlightAuto(text).value;
+    return `<pre><code class="hljs">${highlighted}</code></pre>`;
+  } catch (err) {
+      console.error('Syntax highlighting failed:', err);
+      return `<pre><code>${text}</code></pre>`;
+  }
+};
+
+marked.setOptions({
+  renderer: renderer
+} as any);
 
 export async function loadPost(filePath: string, outPath: string){
     const {front, body } = await loadMardown(filePath);

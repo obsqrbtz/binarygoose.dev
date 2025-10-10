@@ -1,5 +1,5 @@
 ---
-title: "AvaloniaUI control with custom rendering"
+title: AvaloniaUI control with custom rendering
 publishDate: "2024-06-07"
 updated: "2024-06-07"
 isFeatured: true
