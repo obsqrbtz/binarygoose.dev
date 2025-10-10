@@ -7,32 +7,45 @@
 }
 
 :root {
-  --bg-color: #1b1d1e;
-  --text-color: #afafaf;
-  --heading-text-color: #e2e2e2;
-  --highlight-color: #feed6c;
-  --dim-color: #6f6f6f;
-  --code-bg-color: #18191a;
-  --code-border-color: #333333;
-  --code-text-color: #afafaf;
-  --img-border-color: #333333;
-  --hl-black: #1b1d1e;
-  --hl-red: #e6dc44;
-  --hl-green: #c8be46;
-  --hl-yellow: #f4fd22;
-  --hl-blue: #737174;
-  --hl-purple: #747271;
-  --hl-cyan: #62605f;
-  --hl-white: #c6c5bf;
-  --hl-bright-black: #505354;
-  --hl-bright-red: #fff78e;
-  --hl-bright-green: #fff27d;
-  --hl-bright-yellow: #feed6c;
-  --hl-bright-blue: #919495;
-  --hl-bright-purple: #9a9a9d;
-  --hl-bright-cyan: #a3a3a6;
-  --hl-bright-white: #dadbd6;
+  /* 
+  * Flexoki color scheme
+  *  https://github.com/kepano/flexoki
+  */
+  /* Main background and text */
+  --bg-color: #100F0F;             /* background */
+  --text-color: #E6E4D9;           /* foreground */
+  --heading-text-color: #FFFCF0;   /* brightWhite */
+  --highlight-color: #D0A215;      /* brightYellow */
+  --dim-color: #575653;             /* brightBlack */
+
+  /* Code blocks */
+  --code-bg-color: #0b0a0a;         /* black */
+  --code-border-color: #575653;     /* brightBlack */
+  --code-text-color: #E6E4D9;       /* foreground */
+
+  /* Images */
+  --img-border-color: #575653;      /* brightBlack */
+
+  /* Syntax highlighting */
+  --hl-black: #100F0F;              /* black */
+  --hl-red: #AF3029;                /* red */
+  --hl-green: #879A39;              /* brightGreen */
+  --hl-yellow: #D0A215;             /* brightYellow */
+  --hl-blue: #205EA6;               /* blue */
+  --hl-purple: #5E409D;             /* purple */
+  --hl-cyan: #24837B;               /* cyan */
+  --hl-white: #F2F0E5;              /* white */
+
+  --hl-bright-black: #575653;       /* brightBlack */
+  --hl-bright-red: #D14D41;         /* brightRed */
+  --hl-bright-green: #66800B;       /* green */
+  --hl-bright-yellow: #D0A215;      /* brightYellow */
+  --hl-bright-blue: #4385BE;        /* brightBlue */
+  --hl-bright-purple: #8B7EC8;      /* brightPurple */
+  --hl-bright-cyan: #3AA99F;        /* brightCyan */
+  --hl-bright-white: #FFFCF0;       /* brightWhite */
 }
+
 * {
   margin: 0;
   padding: 0;
