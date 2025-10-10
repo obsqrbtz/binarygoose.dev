@@ -1,0 +1,148 @@
+@font-face {
+  font-family: 'CommitMono';
+  src: url('../fonts/CommitMono-400-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'CommitMono', monospace;
+  font-size: 14px;
+  line-height: 1.6;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 80ch;
+  margin: 0 auto;
+}
+
+.prompt {
+  color: var(--text-color);
+  margin-bottom: 10px;
+}
+
+.prompt::before {
+  content: "❯ ";
+  color: var(--hl-green);
+}
+
+nav {
+  margin-bottom: 30px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: var(--highlight-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--heading-text-color);
+  margin: 20px 0 10px 0;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 1.2em;
+}
+
+h2 {
+  font-size: 1.1em;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+a {
+  color: var(--highlight-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline dashed;
+}
+
+ul, ol {
+  margin: 15px 0;
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+.post-list {
+  list-style: none;
+  padding: 0;
+}
+
+.post-list li {
+  margin-bottom: 4px;
+}
+
+.post-list li a {
+  text-decoration: none;
+  white-space: pre;
+}
+
+.post-list li a:hover{
+  text-decoration: underline dashed;
+}
+
+.perms {
+  color: var(--hl-yellow);
+}
+
+.user {
+  color: var(--hl-blue);
+}
+
+.date {
+  color: var(--hl-green);
+}
+
+.filename {
+  color: var(--hl-white);
+}
+
+.content {
+  margin-top: 20px;
+}
+
+.post-meta {
+  color: var(--dim-color);
+  margin-bottom: 20px;
+  font-size: 0.9em;
+}
+
+p {
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1em 0;
+    border: 1px solid var(--img-border-color);
+  }
+}

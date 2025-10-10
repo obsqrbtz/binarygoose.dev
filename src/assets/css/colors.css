@@ -1,0 +1,40 @@
+:root {
+  /* 
+  * Flexoki color scheme
+  *  https://github.com/kepano/flexoki
+  */
+
+  /* Syntax highlighting */
+  --hl-black: #100F0F;
+  --hl-red: #AF3029;
+  --hl-green: #879A39;
+  --hl-yellow: #D0A215;
+  --hl-blue: #205EA6;
+  --hl-purple: #5E409D;
+  --hl-cyan: #24837B;
+  --hl-white: #F2F0E5;
+
+  --hl-bright-black: #575653;
+  --hl-bright-red: #D14D41;
+  --hl-bright-green: #66800B;
+  --hl-bright-yellow: #D0A215;
+  --hl-bright-blue: #4385BE;
+  --hl-bright-purple: #8B7EC8;
+  --hl-bright-cyan: #3AA99F;
+  --hl-bright-white: #FFFCF0;
+
+    /* Code blocks */
+  --code-bg-color: #0b0a0a;
+  --code-border-color: var(--hl-bright-black); 
+  --code-text-color: var(--hl-white);
+
+    /* Main background and text */
+  --bg-color: var(--hl-black);
+  --text-color: var(--hl-white);
+  --heading-text-color: var(--hl-green);
+  --highlight-color: var(--hl-yellow);
+  --dim-color: var(--hl-bright-black);
+
+  /* Images */
+  --img-border-color: var(--hl-bright-black); 
+}

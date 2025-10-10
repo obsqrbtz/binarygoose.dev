@@ -14,21 +14,28 @@ async function main() {
   const assetsDir = path.join(config.outDir, 'assets');
   const fontSrcDir = path.join('src', 'assets', 'fonts');
   const fontDestDir = path.join(assetsDir, 'fonts');
+  const cssSrcDir = path.join('src', 'assets', 'css');
+  const cssDestDir = path.join(assetsDir, 'css');
 
   await fs.promises.mkdir(assetsDir, { recursive: true });
 
   try {
-    await fs.promises.copyFile(
-      path.join('src', 'assets', 'style.css'),
-      path.join(assetsDir, 'style.css')
-    );
-    console.log(`Copied style.css`);
+    await fs.promises.mkdir(cssDestDir, { recursive: true });
+    const cssFiles = await fs.promises.readdir(cssSrcDir);
+
+    for (const cssFile of cssFiles) {
+      await fs.promises.copyFile(
+        path.join(cssSrcDir, cssFile),
+        path.join(cssDestDir, cssFile)
+      );
+    }
+    console.log(`Copied ${cssFiles.length} css files`);
   }
   catch (error) {
-    console.log('Style.css is missing');
+    console.log('Could not copy css');
   }
 
-    try {
+  try {
     await fs.promises.copyFile(
       path.join('src', 'assets', 'favicon.png'),
       path.join(assetsDir, 'favicon.png')

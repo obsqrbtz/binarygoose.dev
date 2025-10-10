@@ -1,0 +1,16 @@
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+    font-size: 13px;
+  }
+  
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+::selection {
+  background-color: var(--text-color);
+  color: var(--bg-color);
+}

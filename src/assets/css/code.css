@@ -1,0 +1,62 @@
+pre, code {
+  font-family: 'CommitMono', monospace;
+  color: var(--code-text-color);
+}
+
+pre {
+  margin: 15px 0;
+  white-space: pre-wrap;
+  padding: 10px;
+  background-color: var(--code-bg-color);
+  border: 1px solid var(--code-border-color);
+}
+
+p, li, h1, h2, h3, h4, h5, h6 {
+  code{
+
+    background-color: var(--code-bg-color);
+    padding: 2px 4px;
+    margin: 2px 4px;
+    border: 1px solid var(--code-border-color);
+  }
+}
+
+.hljs-comment,
+.hljs-quote { color: var(--hl-bright-black); font-style: italic; }
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-subst { color: var(--hl-red); font-weight: bold; }
+
+.hljs-literal,
+.hljs-number,
+.hljs-tag .hljs-attr { color: var(--hl-green); }
+
+.hljs-string,
+.hljs-doctag { color: var(--hl-yellow); }
+
+.hljs-title,
+.hljs-section,
+.hljs-selector-id { color: var(--hl-blue); }
+
+.hljs-type,
+.hljs-class .hljs-title { color: var(--hl-purple); }
+
+.hljs-name,
+.hljs-attribute { color: var(--hl-cyan); }
+
+.hljs-variable,
+.hljs-template-variable,
+.hljs-link,
+.hljs-bullet { color: var(--hl-white); }
+
+.hljs-meta,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-emphasis { color: var(--hl-bright-red); }
+
+.hljs-strong { font-weight: bold; }
+
+.hljs-addition { background-color: var(--hl-bright-green); }
+
+.hljs-deletion { background-color: var(--hl-bright-yellow); }
