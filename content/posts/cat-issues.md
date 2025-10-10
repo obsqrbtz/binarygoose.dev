@@ -12,9 +12,9 @@ tags:
 excerpt: "Being dumb for 4 hours straight"
 ---
 
-A few days ago I booted up my Arch Linux install and immediately hit a black screen right after GRUB. No error message, no flicker, just blackness.
+A few days ago I booted up my Arch Linux install and was greeted with a black screen right after GRUB. No error message, no flicker, nothing.
 
-The weird part? The system was clearly running. I could seemingly “blindly” log in and even access my media servers from my phone. So it wasn’t a total crash, just no display.
+The weird part? The system was clearly running. I could seemingly “blindly” log in and even access media servers from my phone. So it wasn’t a total crash, just no display.
 
 Naturally, my first thought was: great, another driver issue. 
 
@@ -22,13 +22,13 @@ Naturally, my first thought was: great, another driver issue.
 
 The problem started right after I did a system upgrade. But since I had already successfully rebooted once after pacman finished its dirty deeds, I was pretty confident the update itself wasn’t the culprit.
 
-Still, I started digging through logs. That’s when I found this suspicious line (`journalctl -k -b -1`):
+I started digging through logs and found this suspicious line (`journalctl -k -b -1`):
 
 ```shell
 amdgpu 0000:0a:00.0: [drm] Cannot find any crtc or sizes
 ```
 
-That immediately screamed GPU driver issue. Oddly enough, the monitor worked perfectly in BIOS, GRUB, and Windows.
+The monitor worked perfectly in BIOS, GRUB, and Windows, so I was almost convinced that I somehow managed to do something funny with the GPU driver without even touching it.
 
 ## Step 2: Kernel parameters and downgrades
 
@@ -38,8 +38,6 @@ I tried gpu-related kernel parameters:
 - `amdgpu.dc=0` - also worked
 - `video=HDMI-A-1:1920x1080@100` - black screen
 - `video=HDMI-A-1:1920x1080@60` - black screen
-
-At this point I decided that the latest kernel or amdgpu driver broke something. 
 
 Okay, let's check which amdgpu-related packages were upgraded:
 
@@ -53,19 +51,19 @@ I installed the LTS kernel, downgraded `linux-firmware-amdgpu` and `xf86-video-a
 
 ## Step 3: The paranoia kicks in
 
-That’s when I noticed something that really threw me off:
+At some point I noticed something weird:
 
 ```shell
 host: MacPro7,1 
 ```
 
-on my Arch install, on classic desktop PC.
+on my Arch install, on a classic desktop PC.
 
 The day before, I had been messing around with macOS 26 installation. It had immediately kernel panicked, but I've still had working macOS 15, so shelved it for later. But now my Arch box thought it was a Mac Pro?
 
 Even worse: macOS was also booting to a black screen. System was alive (keyboard responsive), but no display.
 
-I'm not an OS-expert, so I've immediately made some dumb assumptions - did macOS somehow corrupt NVRAM or some other black magic to my motherboard?
+I'm not an OS-expert, so I've immediately made some dumb assumptions - did macOS somehow corrupt NVRAM or did some other black magic to my motherboard?
 
 ## Step 4: Any issue can be resolved by nuking something
 
