@@ -8,9 +8,21 @@
     flex-direction: column;
     gap: 10px;
   }
-}
+    .post-list li a {
+    display: flex;
+    flex-direction: column;
+    white-space: normal;
+    line-height: 1.4;
+  }
 
-::selection {
-  background-color: var(--text-color);
-  color: var(--bg-color);
+  .post-list li a .meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .post-list li a .filename {
+    margin-top: 0.2rem;
+    word-break: break-word;
+  }
 }

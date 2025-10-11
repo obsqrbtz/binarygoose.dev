@@ -15,14 +15,18 @@
   <link rel="icon" type="image/x-icon" href="/assets/favicon.png">
 </head>
 <body>
+
+  <header class="site-header">
+    <span class="site-title">binarygoose.dev</span>
+    <nav class="nav-bar">
+      {{nav}}
+    </nav>
+  </header>
+
   <div class="container">
     <div class="prompt">cd binarygoose.dev/content/pages</div>
     <div class="prompt">cat {{term_title}}.md</div>
     
-    <nav>
-      {{nav}}
-    </nav>
-
     <h1>{{title}}</h1>
 
     <main class="content">

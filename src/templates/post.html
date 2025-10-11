@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <title>{{title}} - binarygoose.dev</title>
@@ -14,14 +15,19 @@
   </noscript>
   <link rel="icon" type="image/x-icon" href="/assets/favicon.png">
 </head>
+
 <body>
+
+  <header class="site-header">
+    <span class="site-title">binarygoose.dev</span>
+    <nav class="nav-bar">
+      {{nav}}
+    </nav>
+  </header>
+
   <div class="container">
     <div class="prompt">cd binarygoose.dev/content/posts</div>
     <div class="prompt">cat {{term_title}}.md</div>
-    
-    <nav>
-      {{nav}}
-    </nav>
 
     <h1>{{title}}</h1>
 
@@ -40,4 +46,5 @@
     <div class="prompt">exit</div>
   </div>
 </body>
+
 </html>

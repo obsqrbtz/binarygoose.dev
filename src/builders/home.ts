@@ -12,7 +12,7 @@ export async function renderHome(posts: Post[], outDir: string, navHtml: string)
         const date = p.publishDate.toDateString().substring(4);
         const postTitle = createStyledTitle(p.title)
 
-        return `<li><a href="${relativePath}"><span class="perms">.rw-r--r--</span> ${fileSize} <span class="user">user</span> <span class="date">${date}</span> <span class="filename">${postTitle}.md</span></a></li>`;
+        return `<li><a href="${relativePath}"><span class="meta"><span class="perms">.rw-r--r--</span> ${fileSize} <span class="user">user</span> <span class="date">${date}</span></span> <span class="filename">${postTitle}.md</span></a></li>`;
     }).join("\n");
 
     const html = template

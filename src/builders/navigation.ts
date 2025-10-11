@@ -9,5 +9,5 @@ export function buildNav(pages: Page[]) {
       return `<a href="/${relativeUrl}">${p.title}</a>`;
     })
   ];
-  return links.join(" | ");
+  return links.join("");
 }

@@ -25,6 +25,7 @@ body {
 .container {
   max-width: 80ch;
   margin: 0 auto;
+  margin-top: 1.5rem;
 }
 
 .prompt {
@@ -37,25 +38,36 @@ body {
   color: var(--hl-green);
 }
 
-nav {
-  margin-bottom: 30px;
-}
-
-nav ul {
-  list-style: none;
+.site-header {
   display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto; 
+  background: var(--hl-black);
+  border-bottom: 1px solid var(--hl-bright-black);
+  padding: 0.6rem 1rem;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
-nav a {
-  color: var(--text-color);
+.nav-bar a {
+  color: var(--dim-color);
   text-decoration: none;
+  margin: 0 0.8rem;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
 }
 
-nav a:hover {
+.nav-bar a:hover {
   color: var(--highlight-color);
 }
+
+.site-title {
+  color: var(--highlight-color);
+}
+
 
 h1, h2, h3, h4, h5, h6 {
   color: var(--heading-text-color);
@@ -145,4 +157,9 @@ p {
     margin: 1em 0;
     border: 1px solid var(--img-border-color);
   }
+}
+
+::selection {
+  background-color: var(--text-color);
+  color: var(--bg-color);
 }
