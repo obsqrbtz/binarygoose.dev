@@ -3,7 +3,7 @@ import path from 'path';
 import { buildPosts, renderPosts } from './builders/post';
 import { buildPages, renderPages } from './builders/page';
 import { renderHome } from './builders/home';
-import { buildNav } from './builders/navigation';
+import { buildNav } from './builders/common';
 
 import config from "./config.js";
 
@@ -62,15 +62,16 @@ async function main() {
 	const pages = await buildPages(config.pageDir, config.outDir)
 	const pageTemplate = await fs.promises.readFile(path.join(config.templateDir, "page.html"), "utf-8");
 	const navHtml = buildNav(pages);
+	const headTemplate = await fs.promises.readFile(path.join(config.templateDir, "head.html"), "utf-8");
 
-	await renderPages(pages, pageTemplate, navHtml);
+	await renderPages(pages, pageTemplate, navHtml, headTemplate);
 
 	const posts = await buildPosts(config.postDir, config.outDir)
 	const postTemplate = await fs.promises.readFile(path.join(config.templateDir, "post.html"), "utf8");
 
-	await renderPosts(posts, postTemplate, navHtml);
+	await renderPosts(posts, postTemplate, navHtml, headTemplate);
 
-	renderHome(posts, config.outDir, navHtml);
+	renderHome(posts, config.outDir, navHtml, headTemplate);
 
 	console.log("Done");
 }
