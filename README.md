@@ -12,6 +12,6 @@ npm run dev
 
 ```shell
 npm run build
-``
+```
 
 Then serve static dist.
