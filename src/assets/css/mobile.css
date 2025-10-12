@@ -1,28 +1,151 @@
-@media (max-width: 1280px) {
+@media (max-width: 768px) {
   body {
-    padding: 10px;
+    padding: 12px;
     font-size: 13px;
   }
-  
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
+
+  .container {
+    margin-top: 1rem;
   }
-    .post-list li a {
+
+  .site-header {
+    flex-direction: column;
+    gap: 0.8rem;
+    padding: 0.8rem;
+  }
+
+  .nav-bar {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-bar a {
+    margin: 0 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  .post-list li a {
     display: flex;
     flex-direction: column;
     white-space: normal;
-    line-height: 1.4;
+    line-height: 1.5;
+    gap: 0.3rem;
   }
 
   .post-list li a .meta {
     display: flex;
     flex-wrap: wrap;
+    gap: 0.5rem;
+    font-size: 0.95em;
+  }
+
+  .post-list li a .filename {
+    word-break: break-word;
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  .container {
+    margin-top: 0.5rem;
+  }
+
+  .site-header {
+    padding: 0.6rem 0.5rem;
+    gap: 0.6rem;
+  }
+
+  .site-title {
+    font-size: 0.95em;
+  }
+
+  .nav-bar {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .nav-bar a {
+    margin: 0;
+    font-size: 0.85rem;
+    padding: 0.3rem;
+  }
+
+  h1 {
+    font-size: 1.15em;
+  }
+
+  h2 {
+    font-size: 1.05em;
+  }
+
+  .post-list li {
+    margin-bottom: 1rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid var(--hl-bright-black);
+  }
+
+  .post-list li:last-child {
+    border-bottom: none;
+  }
+
+  .post-list li a {
+    gap: 0.4rem;
+    line-height: 1.6;
+  }
+
+  .post-list li a .meta {
+    font-size: 0.9em;
     gap: 0.4rem;
   }
 
   .post-list li a .filename {
-    margin-top: 0.2rem;
-    word-break: break-word;
+    font-size: 0.95em;
+    line-height: 1.4;
+  }
+
+  .post-meta {
+    font-size: 0.85em;
+  }
+
+  .prompt {
+    font-size: 0.95em;
+  }
+
+  ul, ol {
+    padding-left: 15px;
+  }
+
+  a {
+    padding: 2px 0;
+    display: inline-block;
+  }
+
+  p {
+    margin-bottom: 18px;
+  }
+
+  .content {
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 320px) {
+  body {
+    font-size: 11px;
+    padding: 6px;
+  }
+
+  .site-header {
+    padding: 0.5rem 0.4rem;
+  }
+
+  .nav-bar a {
+    font-size: 0.8rem;
   }
 }
