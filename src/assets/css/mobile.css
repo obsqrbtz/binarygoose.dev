@@ -24,6 +24,15 @@
     font-size: 0.9rem;
   }
 
+  .doc-layout {
+    display: block;
+  }
+
+  .doc-sidebar {
+    position: static;
+    margin-bottom: 1rem;
+  }
+
   .post-list li a {
     display: flex;
     flex-direction: column;

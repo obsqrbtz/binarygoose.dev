@@ -1,0 +1,23 @@
+{
+  "title": "clrsync",
+  "items": [
+    { "label": "Overview", "path": "overview" },
+    {
+      "label": "Installation",
+      "path": "docs/install",
+      "children": [
+        { "label": "NixOS", "path": "docs/install/nixos" },
+        { "label": "Fedora", "path": "docs/install/fedora" },
+        { "label": "Ubuntu", "path": "docs/install/ubuntu" },
+        { "label": "Windows", "path": "docs/install/windows" },
+        { "label": "Manual", "path": "docs/install/manual" }
+      ]
+    },
+    { "label": "Configuration", "path": "docs/configure" },
+    { "label": "Templates", "path": "docs/templates" },
+    { "label": "Palettes", "path": "docs/palettes" },
+    { "label": "Usage", "path": "docs/usage" },
+    { "label": "Build", "path": "docs/build" }
+  ]
+}
+

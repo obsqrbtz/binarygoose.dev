@@ -8,6 +8,7 @@ class Config {
 
 	postDir = path.join(this.contentDir, "posts");
 	pageDir = path.join(this.contentDir, "pages");
+	projectDir = path.join(this.contentDir, "projects");
 	templateDir = path.join(this.srcDir, "templates");
 }
 

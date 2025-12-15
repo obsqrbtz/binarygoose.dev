@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+{{head}}
+<body>
+
+  <header class="site-header">
+    <span class="site-title">binarygoose.dev</span>
+    <nav class="nav-bar">
+      {{nav}}
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="prompt">cd binarygoose.dev/content/projects/{{project_slug}}</div>
+
+    <div class="doc-layout">
+      <aside class="doc-sidebar">
+        {{project_nav}}
+      </aside>
+
+      <div class="doc-content">
+        <div class="prompt">cat {{term_title}}.md</div>
+
+        <h1>{{title}}</h1>
+
+        <main class="content">
+          {{content}}
+        </main>
+
+        <div class="prompt">exit</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+

@@ -13,3 +13,24 @@ interface Page {
 	content: string;
 	outDir: string;
 }
+
+interface ProjectNavItem {
+	label: string;
+	path?: string;
+	children?: ProjectNavItem[];
+}
+
+interface ProjectDoc {
+	title: string;
+	content: string;
+	outDir: string;
+	relativePath: string;
+}
+
+interface Project {
+	slug: string;
+	title: string;
+	entryPath: string;
+	navItems: ProjectNavItem[];
+	docs: ProjectDoc[];
+}

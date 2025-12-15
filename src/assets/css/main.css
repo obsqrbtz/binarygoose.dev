@@ -23,7 +23,7 @@ body {
 }
 
 .container {
-  max-width: 80ch;
+  max-width: 110ch;
   margin: 0 auto;
   margin-top: 1.5rem;
 }
@@ -140,6 +140,89 @@ li {
 
 .content {
   margin-top: 20px;
+}
+
+.doc-layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.doc-sidebar {
+  position: sticky;
+  top: 4.5rem;
+}
+
+.doc-nav {
+  background: var(--hl-black);
+  border: 1px solid var(--hl-bright-black);
+  border-radius: 0px;
+  padding: 1rem;
+}
+
+.doc-nav-title {
+  color: var(--heading-text-color);
+  margin-bottom: 0.6rem;
+  font-weight: 600;
+}
+
+.doc-nav ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.doc-nav li {
+  margin: 0.25rem 0;
+}
+
+.doc-nav a,
+.doc-nav .doc-nav-label {
+  color: var(--dim-color);
+  text-decoration: none;
+  display: block;
+  padding: 0.15rem 0.25rem;
+  border-radius: 0px;
+}
+
+.doc-nav a:hover {
+  color: var(--highlight-color);
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.doc-nav ul ul {
+  padding-left: 1rem;
+  margin-left: 0.25rem;
+  border-left: 1px solid var(--hl-bright-black);
+}
+
+.doc-nav .is-active > a {
+  color: var(--highlight-color);
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.doc-nav .is-ancestor > a {
+  color: var(--heading-text-color);
+}
+
+.doc-content {
+  min-width: 0;
+}
+
+.project-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.project-list li {
+  margin-bottom: 0.6rem;
+}
+
+.project-list a {
+  text-decoration: none;
 }
 
 .post-meta {
