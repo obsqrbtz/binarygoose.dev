@@ -2,6 +2,7 @@
   "title": "clrsync",
   "items": [
     { "label": "Overview", "path": "overview" },
+    { "label": "Quickstart", "path": "docs/quickstart" },
     {
       "label": "Installation",
       "path": "docs/install",

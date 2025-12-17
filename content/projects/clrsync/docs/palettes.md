@@ -4,12 +4,23 @@ seo:
   title: Palettes
 ---
 
-Create palette files in your `palettes_path` directory. Each palette should have `toml` format and define colors as `#RRGGBBAA`.
+Palettes are TOML files defining color variables. Store palette files in the directory specified by `palettes_path` in your configuration.
 
-## Example palette
+## Format
+
+Each palette requires a `[general]` section with a name and a `[colors]` section defining color variables in `#RRGGBBAA` format. If alpha component is omitted clrsync asumes that color is opaque.
 
 ```toml
-# ~/.config/clrsync/palettes/cursed.toml
+[general]
+name = 'palette_name'
+
+[colors]
+variable_name = '#RRGGBBAA'
+```
+
+## Palette example
+
+```toml
 [general]
 name = 'cursed'
 
@@ -65,3 +76,5 @@ surface = '#1C1C1CFF'
 surface_variant = '#1C1C1CFF'
 warning = '#E1C135FF'
 ```
+
+Note that clrsync uses palettes to render it's own UI. If you are not going to use all variables fill them with colors from bundled palette.

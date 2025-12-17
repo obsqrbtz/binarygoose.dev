@@ -4,14 +4,14 @@ seo:
   title: Overview
 ---
 
-A theme management tool for synchronizing color schemes across multiple applications. clrsync allows to define color palettes once and apply them consistently to all configurable applications.
+clrsync is a theme management system that synchronizes color schemes across multiple applications. Define color palettes once and apply them consistently to all configurable applications.
 
 ## Features
 
-- **Unified Color Management**: Define color palettes in TOML format and apply them across multiple applications
-- **CLI & GUI**: Choose between a command-line interface or a graphical editor
-- **Live Reload**: Define post-apply hooks (configurable per template)
-- **Flexible Color Formats**: Support for HEX, RGB, HSL with multi-component access (e.g., `{color.r}`, `{color.hex}`, `{color.hsl}`)
+- **Centralized color management** - Define color palettes in TOML format and apply them across multiple applications
+- **CLI & GUI** - Choose between a command-line interface or a graphical editor
+- **Hot reloading** - Define post-apply hooks (configurable per template)
+- **Multi-format color output** - HEX, RGB, HSL with component access (e.g., `{color.r}`, `{color.hex}`)
 
 ## Acknowledgments
 
