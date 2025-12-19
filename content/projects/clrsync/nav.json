@@ -10,6 +10,7 @@
         { "label": "NixOS", "path": "docs/install/nixos" },
         { "label": "Fedora", "path": "docs/install/fedora" },
         { "label": "Ubuntu", "path": "docs/install/ubuntu" },
+	{"label": "Arch", "path": "docs/install/arch"},
         { "label": "Windows", "path": "docs/install/windows" },
         { "label": "Manual", "path": "docs/install/manual" }
       ]
