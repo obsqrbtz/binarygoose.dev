@@ -13,6 +13,10 @@ clrsync is a theme management system that synchronizes color schemes across mult
 - **Hot reloading** - Define post-apply hooks (configurable per template)
 - **Multi-format color output** - HEX, RGB, HSL with component access (e.g., `{color.r}`, `{color.hex}`)
 
+## Links
+
+- **[GitHub Repository](https://github.com/obsqrbtz/clrsync)**
+
 ## Acknowledgments
 
 - **[matugen](https://github.com/InioX/matugen)** - A material you color generation tool

@@ -18,14 +18,16 @@ body {
   font-family: 'CommitMono', monospace;
   font-size: 14px;
   line-height: 1.6;
-  padding: 20px;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .container {
   max-width: 110ch;
   margin: 0 auto;
   margin-top: 1.5rem;
+  padding: 0 20px 20px 20px;
 }
 
 .prompt {
@@ -42,14 +44,14 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 auto; 
   background: var(--hl-black);
   border-bottom: 1px solid var(--hl-bright-black);
-  padding: 0.6rem 1rem;
-  text-align: center;
+  padding: 0.6rem 20px;
+  margin: 0 20px;
   position: sticky;
   top: 0;
   z-index: 100;
+  flex-shrink: 0;
 }
 
 .nav-bar a {
@@ -225,6 +227,54 @@ li {
   text-decoration: none;
 }
 
+.projects-grid {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.project-card {
+  background: var(--hl-black);
+  border: 1px solid var(--hl-bright-black);
+  padding: 1.5rem;
+}
+
+.project-card:hover {
+  border-color: var(--highlight-color);
+}
+
+.project-card h2 {
+  margin: 0 0 0.75rem 0;
+  font-size: 1.4em;
+}
+
+.project-card h2 a {
+  color: var(--heading-text-color);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.project-card h2 a:hover {
+  color: var(--highlight-color);
+}
+
+.project-description {
+  color: var(--text-color);
+  margin: 0 0 1rem 0;
+  line-height: 1.6;
+}
+
+.project-link {
+  color: var(--highlight-color);
+  text-decoration: none;
+  font-size: 0.95em;
+  transition: color 0.2s;
+}
+
+.project-link:hover {
+  color: var(--hl-green);
+}
+
 .post-meta {
   color: var(--dim-color);
   margin-bottom: 20px;
@@ -237,6 +287,37 @@ p img {
   display: block;
   margin: 1em 0;
   border: 1px solid var(--img-border-color);
+}
+
+.site-footer {
+  margin-top: auto;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 2rem 20px;
+  border-top: 1px solid var(--hl-bright-black);
+  text-align: center;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: var(--highlight-color);
+}
+
+.footer-separator {
+  color: var(--dim-color);
+  user-select: none;
 }
 
 ::selection {

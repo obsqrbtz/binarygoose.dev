@@ -68,7 +68,14 @@ export async function renderProjects(projects: Project[], template: string, navH
 export async function renderProjectIndex(projects: Project[], template: string, navHtml: string, headTemplate: string, outDir: string) {
 	const projectItems = projects.map(project => {
 		const entryHref = `/projects/${project.slug}/${project.entryPath}/`;
-		return `<li><a href="${entryHref}"><span class="filename">${project.title}</span></a></li>`;
+		const overviewDoc = project.docs.find(doc => doc.relativePath === 'overview');
+		const description = extractDescription(overviewDoc?.content ?? '');
+		
+		return `<div class="project-card">
+			<h2><a href="${entryHref}">${project.title}</a></h2>
+			<p class="project-description">${description}</p>
+			<a href="${entryHref}" class="project-link">View project →</a>
+		</div>`;
 	}).join("\n");
 
 	const headHtml = buildHead("Projects", headTemplate);
@@ -80,6 +87,14 @@ export async function renderProjectIndex(projects: Project[], template: string, 
 		.replace("{{nav}}", navHtml);
 
 	await writeHtml(path.join(outDir, "projects"), html);
+}
+
+function extractDescription(content: string): string {
+	const paragraphMatch = content.match(/<p>(.*?)<\/p>/);
+	if (paragraphMatch && paragraphMatch[1]) {
+		return paragraphMatch[1];
+	}
+	return '';
 }
 
 async function loadProjectDocs(projectDir: string, outDir: string) {
